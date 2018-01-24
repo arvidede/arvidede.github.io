@@ -1,0 +1,34 @@
+body {
+    background: #777;
+}
+
+.navbar {
+    font-family: Montserrat, sans-serif;
+    background: #2d2d30;
+    opacity: 0.9;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #d5d5d5 !important;
+}
+
+button {
+    color: #d5d5d5 !important;
+}
+
+#info {
+    font-size: 36px;
+    width: 100%;
+    margin-top: 15%;
+    padding: 10px;
+    text-align: center;
+    color: #d5d5d5;
+}
+
+a:active {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}

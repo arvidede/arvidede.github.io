@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    background: linear-gradient(to bottom, #ccc 60%, #777);
+    background: linear-gradient(to bottom, #ccc, #777);
 }
 
 .navbar {
@@ -26,15 +26,13 @@ button {
     flex-direction: column;
     font-size: 36px;
     position: absolute;
-    margin: auto;
-    margin-top: 20%;
-    top: auto;
+    top: 200px;
     right: 0;
     left: 0;
     padding: 10px;
     text-align: center;
     color: #d9d9d9;
-    background: #ccc;
+    background-blend-mode: normal;
 }
 
 footer {

@@ -1,5 +1,6 @@
-body {
-    background: #777;
+html {
+    height: 100%;
+    background: linear-gradient(to bottom, #ccc 60%, #777);
 }
 
 .navbar {
@@ -12,23 +13,42 @@ body {
   color: #d5d5d5 !important;
 }
 
+.navbar-nav li a:hover {
+      color: #fff !important;
+}
+
 button {
     color: #d5d5d5 !important;
 }
 
 #info {
     font-size: 36px;
-    width: 100%;
-    margin-top: 15%;
+    position: fixed;
+    margin: auto;
+    margin-top: 20%;
+    right: 0;
+    left: 0;
     padding: 10px;
     text-align: center;
+    color: #d9d9d9;
+    background: #ccc;
+}
+
+footer {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    color: #d5d5d5;
+    opacity: 0.3;
+}
+
+.footer a {
     color: #d5d5d5;
 }
 
-a:active {
-    color: black;
-}
-
-a:hover {
-    color: black;
+.footer a:hover {
+    text-decoration-line: none;
+    color: #f2f2f2;
+    transition: linear 0.1s;
 }

@@ -1,10 +1,11 @@
 html {
-    height: 200%;
-    background: linear-gradient(to bottom, #ccc, #777);
+    height: 300%;
 }
 
 body {
     font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar-header {
@@ -53,37 +54,60 @@ button {
     padding: 100px;
 }
 
-#info {
+#content {
+    color: #d9d9d9;
     display: flex;
     flex-direction: column;
-    font-size: 36px;
-    position: absolute;
-    top: 200px;
-    right: 0;
-    left: 0;
-    padding: 10px;
-    text-align: center;
-    color: #d9d9d9;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(to bottom, #ccc, #777);;
+}
+
+#info {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#aboutme {
+    padding-top: 50px;
+    height: 100vh;
+}
+
+#contact {
+    padding-top: 50px;
+    height: 100vh;
     background-blend-mode: normal;
+}
+
+button[type="submit"]:hover {
+    color: black;
+}
+
+#knapp:active{
+    transition: linear 0.2s;
+    opacity: 0.9;
+}
+
+#knapp:focus{
+    outline: 0;
 }
 
 footer {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: auto;
     bottom: 5px;
-    width: 100%;
     text-align: center;
     color: #d5d5d5;
     opacity: 0.3;
 }
 
-.footer a {
+#mail {
     color: #d5d5d5;
 }
 
-.footer a:hover {
+#mail:hover {
     text-decoration-line: none;
     color: #f2f2f2;
     transition: linear 0.1s;

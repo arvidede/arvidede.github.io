@@ -3,10 +3,24 @@ html {
     background: linear-gradient(to bottom, #ccc, #777);
 }
 
-.navbar {
-    font-family: Montserrat, sans-serif;
+body {
+ font-family: Montserrat, sans-serif;
+}
+
+#top {
     background: #2d2d30;
     opacity: 0.9;
+    position: fixed;
+}
+
+.navbar {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #2d2d30;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 2px;
+  opacity: 0.9;
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -14,7 +28,8 @@ html {
 }
 
 .navbar-nav li a:hover {
-      color: #fff !important;
+    transition: linear 0.2s;
+    color: #fff !important;
 }
 
 button {

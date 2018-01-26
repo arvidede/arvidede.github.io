@@ -13,7 +13,7 @@
   <title>Arvid Edenheim</title>
 </head>
 
-<body body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body body id="myPage" data-spy="spyscroll" data-target=".navbar" data-offset="50">
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid" id="menu">
       <div class="navbar-header">
@@ -38,19 +38,9 @@
     Contact: <a href="mailto:arvid@edenheim.se" target="_top">arvid@edenheim.se</a>
   </footer>
 </body>
-  <script>
-    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-      ':35729/livereload.js?snipver=1"></' + 'script>')
-  </script>
-  <script>
-    // document.ready(function(){
-    //   $(".navbar a, footer a[href='#']").on('click', function(event) {
-    //     $('html, body').animate({
-    //       scrollTop: $(hash).offset().top
-    //     }, 900, function(){
-    //     })
-    //   })
-    // });
+<script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+    ':35729/livereload.js?snipver=1"></' + 'script>')
   </script>
 
   <!-- Optional JavaScript -->
@@ -58,4 +48,27 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</html>
+
+  <script>
+    $(".nav a").on("click", function(){
+      $(".nav").find(".active").removeClass("active");
+      $(this).parent().addClass("active");
+    });
+  </script>
+
+  <script>
+    $(document).ready(function(){
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    })
+  </script>
+  </html>

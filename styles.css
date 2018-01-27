@@ -21,7 +21,7 @@ body {
     border: 0;
     font-size: 11px !important;
     letter-spacing: 2px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .navbar li a, .navbar .navbar-brand {
@@ -52,6 +52,10 @@ button {
 .navbar-toggle {
     color: #000;
     padding: 100px;
+}
+
+div {
+    font-family: Montserrat;
 }
 
 #content {
@@ -101,6 +105,9 @@ footer {
     text-align: center;
     color: #d5d5d5;
     opacity: 0.3;
+}
+.row {
+    align-content: center;
 }
 
 #mail {

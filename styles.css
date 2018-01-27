@@ -85,10 +85,6 @@ div {
     background-blend-mode: normal;
 }
 
-button[type="submit"]:hover {
-    color: black;
-}
-
 #knapp:active{
     transition: linear 0.2s;
     opacity: 0.9;
@@ -106,16 +102,34 @@ footer {
     color: #d5d5d5;
     opacity: 0.3;
 }
-.row {
-    align-content: center;
-}
 
-#mail {
+#logos a {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
     color: #d5d5d5;
+    text-decoration-line: none;
 }
 
-#mail:hover {
+#logos span {
+
+    justify-content: center;
+}
+
+#credentials {
+   padding-top: 15px;
+}
+
+#credentials a {
+     color: #d5d5d5;
+}
+
+#credentials a:focus{
+   text-decoration: none;
+}
+
+#logos a:hover{
     text-decoration-line: none;
     color: #f2f2f2;
-    transition: linear 0.1s;
+    -webkit-transition: -webkit-linear 0.1s;
 }
+

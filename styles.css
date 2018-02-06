@@ -128,6 +128,10 @@ footer {
    text-decoration: none;
 }
 
+.col-xs-4 p {
+    font-size: 1.5em;
+}
+
 #logos a:hover{
     -webkit-text-decoration-line: none;
     text-decoration-line: none;

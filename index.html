@@ -1,18 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://use.fontawesome.com/424e7678cf.js"></script>
-
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <title>Arvid Edenheim</title>
 </head>
-
 <body body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid" id="menu">
@@ -32,25 +28,34 @@
             </div>
         </div>
     </nav>
-
     <div id="content">
-
-        <div id="info">
-            <h1 class="text-center"> Under construction </h1>
+        <div autoscroll="true" class="ng-scope" id="top">
+            <div class="middle"></div>
+            <div class="hero-image ng-scope" id="info">
+                <a id="abMe" href="#aboutme"><img src="assets/img/_MG_0912.jpg" id="left"></a>
+                <a href="#contact"><img src="assets/img/G0058981.jpg" id="right" ></a>
+            </div>
+            <a href="#aboutme" id="arrow">
+                <i class="fas fa-angle-down fa-5x"></i>
+            </a>
         </div>
 
         <div id="aboutme" class="container text-center">
             <h3 class="text-center">About Me</h3>
+            <div class="cv-row">
+                <a class="cv-btn" href="./assets/CV.pdf" target="_blank"><i id="cv" class="far fa-file fa-7x"></i>
+                    <h3>CV</h3>
+                </a>
+            </div>
         </div>
-
         <div id="contact" class="container text-center">
             <h3 class="text-center">Contact</h3>
             <div class="row">
                 <p>Fan? Drop a note.</p>
-                <div class="col-sm-8 col-sm-offset-2">
+                <form method="POST" action="https://formspree.io/arvidede@icloud.com" class="col-sm-8 col-sm-offset-2">
                     <div class="row">
                         <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="name" required>
                         </div>
                         <div class="col-sm-6 form-group">
                             <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
@@ -63,7 +68,7 @@
                             <button class="btn pull-right" type="submit" id="knapp">Send</button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="container-fluid" id="logos">
                 <div id="credentials">
@@ -73,13 +78,13 @@
                 </div>
                 <br>
                 <div class="col-xs-4">
-                    <p><span class="fa fa-github" aria-hidden="true"><a href="https://github.com/arvidede"> GitHub</a></span></p>
+                    <p><i class="fab fa-github" aria-hidden="true"></i><a href="https://github.com/arvidede"> GitHub</a></p>
                 </div>
                 <div class="col-xs-4">
-                    <p><span class="fa fa-instagram"><a href="https://www.instagram.com/arvidede/"> Instagram</a></span></p>
+                    <p><i class="fab fa-instagram"></i><a href="https://www.instagram.com/arvidede/"> Instagram</a></p>
                 </div>
                 <div class="col-xs-4">
-                    <p><span class="fa fa-facebook"><a href="https://www.facebook.com/arvidede"> facebook</a></span></p>
+                    <p><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/arvidede"> facebook</a></p>
                 </div>
             </div>
         </div>
@@ -105,17 +110,68 @@
 
 <script>
     $(document).ready(function(){
-      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-        }, 500, function(){
-            window.location.hash = hash;
+
+        $(".navbar a, footer a[href='#myPage'], #arrow, #abMe").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
         });
-      }
-  });
-  })
+
+
+    })
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#right")
+        .mouseenter(function(){
+            $("#left").css({
+                "width"       : "40vw",
+                "transition"  : "0.4s ease"
+            })
+            $("#right").css({
+                "width"       : "60vw",
+                "transition"  : "0.4s ease"
+            })
+        })
+        .mouseleave(function(){
+            $("#left").css({
+                "width"       : "50vw",
+                "transition"  : "0.4s ease"
+            })
+            $("#right").css({
+                "width"       : "50vw",
+                "transition"  : "0.4s ease"
+            })
+        });
+
+        $("#left")
+        .mouseenter(function(){
+            $("#left").css({
+                "width"       : "60vw",
+                "transition"  : "0.4s ease"
+            })
+            $("#right").css({
+                "width"       : "40vw",
+                "transition"  : "0.4s ease"
+            })
+        })
+        .mouseleave(function(){
+            $("#left").css({
+                "width"       : "50vw",
+                "transition"  : "0.4s ease"
+            })
+            $("#right").css({
+                "width"       : "50vw",
+                "transition"  : "0.4s ease"
+            })
+        });
+    });
 </script>
 </html>

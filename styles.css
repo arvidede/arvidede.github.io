@@ -15,38 +15,71 @@ body {
 
 .navbar {
     font-family: Montserrat, sans-serif;
-    background: #2d2d30;
+    background: #F5F5F5 !important;
     position: fixed;
-    margin-bottom: 0;
-    border: 0;
+    margin-bottom: 2px;
+    border: none !important;
     font-size: 11px !important;
     letter-spacing: 2px;
     opacity: 0.8;
 }
 
 .navbar li a, .navbar .navbar-brand {
-    color: #d5d5d5 !important;
+    color: #939393 !important;
 }
 
-.navbar-nav li a:hover, .navbar-brand:hover {
+.navbar .active a::after {
+    border-bottom: 3px solid #939393;
+    background: none;
+    bottom: 3px;
+    content: " ";
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    background: transparent !important;
+}
+
+.cv-btn {
+    margin-left: 10vw;
+    display: flex;
+    align-items: center;
+    color: inherit;
+    border-radius: 10px;
+    padding: 10px;
+    padding-right: 20px;
     transition: linear 0.2s;
-    color: #fff !important;
 }
 
-#myNavbar .active,{
-    transition: linear 2s;
-    color: #000 !important;
-    opacity: 0.6;
-}
-
-.active a {
+.cv-btn:hover {
     transition: linear 0.2s;
-    color: #fff !important;
-    opacity: 0.6;
+    opacity: 0.8;
+    color: inherit;
+    background: #3a3a3a;
+    text-decoration: none;
+}
+.cv-btn:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+#cv {
+    margin-right: 20px;
+}
+
+.cv-row {
+    display: flex;
+    flex-direction: row;
 }
 
 button {
     color: #d5d5d5 !important;
+    border-radius: 0 !important;
+    border: none;
 }
 
 .navbar-toggle {
@@ -58,20 +91,75 @@ div {
     font-family: Montserrat;
 }
 
+.middle {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+}
+
 #content {
-    color: #d9d9d9;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    background: linear-gradient(to bottom, #ccc, #777);;
+    background: linear-gradient(to bottom, #9da8b5, #c5d3e2);;
 }
 
 #info {
     height: 100vh;
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+}
+
+#arrow {
+    background: transparent;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    bottom: 5px;
     justify-content: center;
-    flex-direction: column;
+    align-content: center;
+    position: absolute;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: 0.3s ease;
+    z-index: 2;
+}
+
+#arrow:hover {
+    transition: 0.3s ease;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    bottom: 3px;
+}
+
+#top {
+    justify-content: center;
+    align-content: center;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#left {
+    width: 50vw;
+    height: 100vh;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+#right {
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 #aboutme {
@@ -83,16 +171,64 @@ div {
     padding-top: 50px;
     height: 100vh;
     background-blend-mode: normal;
+    display: flex;
+    flex-direction: column;
 }
 
 #knapp:active{
-    -webkit-transition: linear 0.2s;
     transition: linear 0.2s;
     opacity: 0.9;
 }
 
 #knapp:focus{
     outline: 0;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    border: 0 !important;
+    resize: none;
+}
+
+.form-group {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    padding: 0 !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+.col {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.form-control ~ .focus-border {
+    position: absolute;
+    left: 0; width: 0;
+    height: 3px;
+    background-color: #52A6CC;
+    transition: 0.4s;
+}
+
+.form-control:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+}
+
+:focus{
+    outline: none;
+}
+
+a:hover {
+    -webkit-text-decoration-line: none !important;
+            text-decoration-line: none !important;
 }
 
 footer {
@@ -104,10 +240,10 @@ footer {
     opacity: 0.3;
 }
 
-#logos a {
+.logos a {
     font-family: Montserrat, sans-serif;
     font-size: 18px;
-    color: #d5d5d5;
+    color: #52A6CC;
     -webkit-text-decoration-line: none;
     text-decoration-line: none;
 }
@@ -117,26 +253,78 @@ footer {
 }
 
 #credentials {
-   padding-top: 15px;
+    padding-top: 15px;
 }
 
 #credentials a {
-     color: #d5d5d5;
+    color: #fff;
 }
 
 #credentials a:focus{
-   text-decoration: none;
+    text-decoration: none !important;
 }
 
-.col-xs-4 p {
-    font-size: 1.5em;
-}
-
-#logos a:hover{
+.logos a:hover{
     -webkit-text-decoration-line: none;
     text-decoration-line: none;
     color: #f2f2f2;
-    -webkit-transition: linear 0.1s;
     transition: linear 0.1s;
 }
+
+.portfolio-outer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+}
+
+.portfolio-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-content img {
+    height: 100%;
+    width: 100%;
+    transition: -webkit-transform linear 10s;
+    transition: transform linear 10s;
+    transition: transform linear 10s, -webkit-transform linear 10s;
+}
+
+.portfolio-inner {
+    height: 60%;
+    width: 296px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-wrapper {
+    color: #fff;
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    transition: -webkit-transform ease 0.3s;
+    transition: transform ease 0.3s;
+    transition: transform ease 0.3s, -webkit-transform ease 0.3s;
+    background: rgba(0,0,0,0.45);
+}
+
+.portfolio-inner:hover .hover-wrapper {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+}
+
+.portfolio-inner:hover img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
 

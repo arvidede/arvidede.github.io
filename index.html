@@ -121,6 +121,10 @@
 
 <script>
     $(document).ready(function(){
+        <<<<<<< HEAD
+        =======
+
+        >>>>>>> a50ea0ea8fa5aae86997dcf1878f44ada30fd816
         $(".navbar a, footer a[href='#myPage'], #arrow, #abMe").on('click', function(event) {
             if (this.hash !== "") {
                 event.preventDefault();
@@ -131,6 +135,7 @@
                     window.location.hash = hash;
                 });
             }
+            <<<<<<< HEAD
         });
     })
 
@@ -168,6 +173,37 @@
                 "transition"  : "0.4s ease"
             })
         });
+        =======
+    });
+
+
+})
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#right")
+        .mouseenter(function(){
+            $("#left").css({
+                "width"       : "40vw",
+                "transition"  : "0.4s ease"
+            })
+            $("#right").css({
+                "width"       : "60vw",
+                "transition"  : "0.4s ease"
+            })
+        })
+        .mouseleave(function(){
+            $("#left").css({
+                "width"       : "50vw",
+                "transition"  : "0.4s ease"
+            })
+            $("#right").css({
+                "width"       : "50vw",
+                "transition"  : "0.4s ease"
+            })
+        });
+        >>>>>>> a50ea0ea8fa5aae86997dcf1878f44ada30fd816
 
         $("#left")
         .mouseenter(function(){

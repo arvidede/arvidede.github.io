@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Section Scrolling</title>
+    <title>Arvid Edenheim</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
     <script type="text/javascript" src="./assets/js/index.js"></script>
 </head>
@@ -9,11 +9,50 @@
     <main>
         <div class="outer" id='outer'>
             <div id="scroll-content">
-                <div class="inner first"><p>Top</p></div>
-                <div class="inner second"><p>Mitten</p></div>
-                <div class="inner third"><p>Botten</p></div>
+                <div class="inner first"><p>Arvid Edenheim</p></div>
+                <div class="inner about">
+                    <h2>Om Mig</h2>
+                    <div class="about-content">
+                        <div class="left">
+                            Vänster
+                        </div>
+                        <div class="right">
+                            Höger
+                        </div>
+                    </div>
+                </div>
+                <div class="inner contact">
+                    <div class="contact-header">
+                        <h2>Frågor?</h2>
+                        <p>Slå en signal eller använd formuläret</p>
+                    </div>
+                    <div class="form-wrapper">
+                        <form method="POST" action="https://formspree.io/arvidede@icloud.com">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input class="form-control" name="name" placeholder="Namn" type="text" required>
+                                    <span class="focus-border"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="email" placeholder="Email" type="email" required>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="comments" placeholder="Vad vill du mig?" rows="5"></textarea>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <input type="submit" placeholder="Skicka">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <button class='top-navigator' onClick='scrollToTop()'></button>
+            <footer>Registrerad för F-Skatt | 2018</footer>
         </div>
     </main>
 </body>

@@ -35,7 +35,6 @@ window.onload = () => {
     }
 
     function phoneScroll(event) {
-        event.preventDefault()
         var currentY = event.touches[0].clientY;
         if (!isSwiping) {
             if(currentY > swipeY){

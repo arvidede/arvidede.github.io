@@ -51,14 +51,12 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    position: fixed;
 }
 
 * {
     font-family: sans-serif;
-}
-
-main, html, body {
-    overflow: hidden;
 }
 
 .outer {

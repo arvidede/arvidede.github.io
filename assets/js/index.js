@@ -35,8 +35,8 @@ window.onload = () => {
     function phoneScroll(event) {
         event.preventDefault()
         var currentY = event.touches[0].clientY;
-        console.log(isSwiping, currentY)
         if (!isSwiping) {
+            console.log('current:', currentY, 'old', swipeY)
             if(currentY > swipeY){
                 doScroll(true)
             } else if(currentY < swipeY){
@@ -60,7 +60,9 @@ window.onload = () => {
 
     function doScroll(isDown) {
         shouldScroll = false
+        document.getElementsByClassName('inner')[currentSection].classList.remove('active')
         currentSection = (currentSection < 2 && isDown) ? (currentSection + 1) : ((currentSection > 0 && !isDown) ? currentSection - 1 : currentSection)
+        document.getElementsByClassName('inner')[currentSection].classList.toggle('active')
         document.getElementsByClassName('top-navigator')[0].className = currentSection > 0 ? 'top-navigator active' : 'top-navigator'
         document.getElementById('scroll-content').style.transform = `translateY(-${currentSection * sectionHeight}px)`
         setTimeout(handleHasScrolled, 800)
@@ -74,6 +76,10 @@ window.onload = () => {
         currentSection = 0
         document.getElementsByClassName('top-navigator')[0].className = 'top-navigator'
         document.getElementById('scroll-content').style.transform = `translateY(0)`
+    }
+
+    navigateDown = () => {
+        doScroll(true)
     }
 }
 

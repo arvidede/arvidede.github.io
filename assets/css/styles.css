@@ -71,22 +71,46 @@ body {
     height: 90vh;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: #fff;
     font-weight: 100 !important;
     font-size: 2rem;
     position: relative;
 }
 
+.inner > .inner-wrapper {
+    padding-top: 3rem;
+    transition: ease 1.2s;
+    opacity: 0;
+}
+
+/* Lazy load effect */
+.inner:nth-of-type(odd) > .inner-wrapper {
+    /*transform: translateX(20%);*/
+}
+
+.inner:nth-of-type(even) > .inner-wrapper {
+    /*transform: translateX(20%);*/
+}
+
+.inner.active > .inner-wrapper {
+    opacity: 1;
+    /*transform: translateX(0);*/
+}
+
+.inner-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #scroll-content {
     position: relative;
     z-index: 2;
+    transition: -webkit-transform ease 800ms;
     transition: transform ease 800ms;
-}
-
-.first {
-    background: #2982F8;
+    transition: transform ease 800ms, -webkit-transform ease 800ms;
 }
 
 .top-navigator {
@@ -117,7 +141,8 @@ body {
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 4px;
-    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
     transition: linear 300ms;
     box-sizing: border-box;
 }
@@ -125,6 +150,34 @@ body {
 .top-navigator.active {
     left: 0;
     opacity: 1;
+}
+
+/* Top */
+
+.first {
+    background: #2982F8;
+}
+
+.down-arrow {
+    position: absolute;
+    bottom: 1rem;
+    width: 3rem;
+    height: 3rem;
+    animation: jump 2s infinite;
+}
+
+.down-arrow:hover {
+    cursor: pointer;
+}
+
+.down-arrow img {
+    width: 100%;
+}
+
+@keyframes jump {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-50%);}
+    100% {transform: translateY(0);}
 }
 
 /* About */
@@ -135,10 +188,105 @@ body {
     flex-direction: column;
 }
 
-.about-content {
+.about-container {
     display: flex;
+    width: 100%;
 }
 
+.about-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    width: 50%;
+}
+
+.about-inner.left p {
+    padding: 0 4rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.cv-btn {
+    margin-top: 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
+}
+
+.cv-btn h3 {
+    margin-left: 1rem;
+}
+
+.portfolio-outer,
+.portfolio-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.portfolio-outer h3 {
+    position: relative;
+}
+
+.portfolio-outer h3:after {
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    background: #fff;
+    color: #fff;
+    bottom: 0;
+}
+
+.portfolio-inner {
+    margin-top: 1rem;
+    position: relative;
+    width: 35%;
+    overflow: hidden;
+}
+
+.portfolio-inner img {
+    width: 100%;
+}
+
+.portfolio-inner .hover-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: ease 0.35s;
+    opacity: 0;
+    background: rgba(0,0,0,0.5);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.portfolio-inner:hover .hover-wrapper {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 2rem;
+}
+
+.logo a {
+    color: #666;
+}
 
 /* Contact Form */
 
@@ -239,7 +387,8 @@ body {
 }
 
 .form-row:nth-of-type(3) input[type="submit"]:active {
-    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
 }
 
 .form-row:nth-of-type(3) input[type="submit"]:hover {
@@ -328,4 +477,16 @@ footer {
   .inner {
     height: calc(375px * 0.9);
   }
+}
+
+
+@media screen and (max-width: 670px) {
+    .about-inner.left p {
+        font-size: 0.9rem;
+        padding: 0 2rem;
+    }
+
+    .portfolio-inner {
+        width: 50%;
+    }
 }

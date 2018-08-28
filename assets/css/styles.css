@@ -53,6 +53,7 @@ body {
     padding: 0;
     overflow: hidden;
     position: fixed;
+    touch-action: none;
 }
 
 * {
@@ -64,7 +65,6 @@ body {
     width: 100vw;
     overflow: hidden;
     position: relative;
-    -webkit-overflow-scrolling: touch;
 }
 
 .inner {

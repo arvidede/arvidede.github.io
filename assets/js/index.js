@@ -1,13 +1,11 @@
 window.onload = () => {
-
-    console.log(document.getElementsByClassName('inner')[0])
     const sectionHeight = document.getElementsByClassName('inner')[1].offsetTop
 
     let currentSection = 0
     let shouldScroll = true
     let lastEvent;
     let lastScroll = 0;
-    let swipeY
+    let swipeY = 0
     let isSwiping = false
 
     document.addEventListener('mousewheel', handleScroll)
@@ -37,6 +35,7 @@ window.onload = () => {
     function phoneScroll(event) {
         event.preventDefault()
         var currentY = event.touches[0].clientY;
+        console.log(isSwiping, currentY)
         if (!isSwiping) {
             if(currentY > swipeY){
                 doScroll(true)

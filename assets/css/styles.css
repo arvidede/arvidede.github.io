@@ -229,11 +229,11 @@ body {
 
 }
 
-.portfolio-outer h3 {
+.portfolio-outer h5 {
     position: relative;
 }
 
-.portfolio-outer h3:after {
+.portfolio-outer h5:after {
     height: 1px;
     width: 100px;
     position: absolute;
@@ -462,7 +462,7 @@ footer {
   }
 
   .inner {
-    height: 70vh;
+    height: 80vh;
   }
 }
 
@@ -488,5 +488,13 @@ footer {
 
     .portfolio-inner {
         width: 50%;
+    }
+
+    .about-inner {
+        padding-top: 1rem;
+    }
+
+    .inner:not(:first-of-type) > .inner-wrapper {
+        padding-top: 1.4rem;
     }
 }

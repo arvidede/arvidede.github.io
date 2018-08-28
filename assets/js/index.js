@@ -11,7 +11,7 @@ window.onload = () => {
     let isSwiping = false
 
     document.addEventListener('mousewheel', handleScroll)
-    document.addEventListener("touchmove", phoneScroll, false);
+    document.addEventListener("touchmove", phoneScroll, true);
     document.addEventListener("touchend", scrollEnd, false);
 
     window.onkeydown = function(event) {
@@ -35,7 +35,6 @@ window.onload = () => {
     }
 
     function phoneScroll(event) {
-        event.preventDefault()
         var currentY = event.touches[0].clientY;
         if (!isSwiping) {
             if(currentY > swipeY){

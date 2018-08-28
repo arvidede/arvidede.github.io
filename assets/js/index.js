@@ -75,6 +75,7 @@ window.onload = () => {
     scrollToTop = () => {
         document.getElementsByClassName('inner')[currentSection].classList.remove('active')
         currentSection = 0
+        document.getElementsByClassName('inner')[currentSection].classList.toggle('active')
         document.getElementsByClassName('top-navigator')[0].className = 'top-navigator'
         document.getElementById('scroll-content').style.transform = `translateY(0)`
     }

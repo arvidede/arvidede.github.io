@@ -286,6 +286,10 @@ footer {
   .outer {
     height: 1024px;
   }
+
+  .inner {
+    height: calc(1024px * 0.9);
+  }
 }
 
 /**
@@ -294,6 +298,10 @@ footer {
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
   .outer {
     height: 768px;
+  }
+
+  .inner {
+    height: calc(768px * 0.9);
   }
 }
 
@@ -304,6 +312,10 @@ footer {
   .outer {
     height: 667px;
   }
+
+  .inner {
+    height: calc(667px * 0.9);
+  }
 }
 
 /**
@@ -312,5 +324,9 @@ footer {
 @media all and (device-width: 375px) and (device-height: 667px) and (orientation:landscape){
   .outer {
     height: 375px;
+  }
+
+  .inner {
+    height: calc(375px * 0.9);
   }
 }

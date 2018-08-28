@@ -77,6 +77,7 @@ main {
     color: #fff;
     font-weight: 100 !important;
     font-size: 2rem;
+    position: relative;
 }
 
 #scroll-content {

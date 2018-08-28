@@ -456,7 +456,7 @@ footer {
 /**
  * iPhone 6/7/8 with portrait orientation.
  */
-@media all and (max-device-width: 500px) and (device-height: 800px) and (orientation:portrait){
+@media all and (max-width: 500px) and (max-height: 800px) and (orientation:portrait){
   .outer {
     height: 667px;
   }
@@ -469,7 +469,7 @@ footer {
 /**
  * iPhone 6/7/8 with landscape orientation.
  */
-@media all and (device-width: 500px) and (device-height: 800px) and (orientation:landscape){
+@media all and (max-width: 500px) and (max-height: 800px) and (orientation:landscape){
   .outer {
     height: 375px;
   }

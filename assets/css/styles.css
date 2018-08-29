@@ -507,26 +507,18 @@ footer a {
 /**
  * iPhone with portrait orientation.
  */
-@media all and (max-width: 500px) and (max-height: 800px) and (orientation:portrait){
-  .outer {
-    height: calc(100vh - 44px);
-  }
-
-  .inner {
-    height: calc(90vh - 44px);
+@media all and (max-width: 500px) and (max-height: 850px) and (orientation:portrait){
+  .inner.contact {
+    height: calc(91vh - 44px);
   }
 }
 
 /**
  * iPhone with landscape orientation.
  */
-@media all and (max-width: 500px) and (max-height: 800px) and (orientation:landscape){
-  .outer {
-    height: calc(100vh - 44px);
-  }
-
-  .inner {
-    height: calc(90vh - 44px);
+@media all and (max-width: 500px) and (max-height: 850px) and (orientation:landscape){
+  .inner.contact {
+    height: calc(91vh - 44px);
   }
 }
 
@@ -564,6 +556,6 @@ footer a {
 
     footer {
         font-size: 0.75rem;
-        height: 10%;
+        bottom: 55px;
     }
 }

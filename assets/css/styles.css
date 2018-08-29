@@ -20,7 +20,9 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -43,6 +45,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
+
+/* Content containers */
 
 html,
 main,
@@ -118,6 +124,12 @@ body {
     transition: transform ease 800ms;
     transition: transform ease 800ms, -webkit-transform ease 800ms;
 }
+
+
+
+
+
+/* Scroll to top */
 
 .top-navigator {
     transform: translateX(-100%);
@@ -226,16 +238,19 @@ body {
 }
 
 .cv-btn {
+    position: relative;
     margin-top: 3rem;
     color: #666;
     display: flex;
     align-items: center;
     -webkit-text-decoration-line: none;
             text-decoration-line: none;
+    margin-left: 10px;
 }
 
 .cv-btn h3 {
-    margin-left: 1rem;
+    position: absolute;
+    right: -3.2rem;
 }
 
 .portfolio-outer,
@@ -494,11 +509,11 @@ footer a {
  */
 @media all and (max-width: 500px) and (max-height: 800px) and (orientation:portrait){
   .outer {
-    height: 667px;
+    height: 100%;
   }
 
   .inner {
-    height: 80vh;
+    height: 90vh;
   }
 }
 
@@ -507,11 +522,11 @@ footer a {
  */
 @media all and (max-width: 500px) and (max-height: 800px) and (orientation:landscape){
   .outer {
-    height: 375px;
+    height: 100%;
   }
 
   .inner {
-    height: 80vh;
+    height: 90vh;
   }
 }
 
@@ -528,9 +543,27 @@ footer a {
 
     .about-inner {
         padding-top: 1rem;
+        width: 100%;
     }
 
-    .inner:not(:first-of-type) > .inner-wrapper {
-        padding-top: 1.4rem;
+    .cv-btn {
+        margin-top: 1.5rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about h2 {
+        font-size: 1.6rem;
+    }
+
+    .about h5 {
+        font-size: 1.4rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+        height: 10vh;
     }
 }

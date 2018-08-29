@@ -523,7 +523,7 @@ footer a {
 }
 
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 660px) {
     .about-inner.left p {
         font-size: 0.9rem;
         padding: 0 2rem;

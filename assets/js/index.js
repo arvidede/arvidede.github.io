@@ -1,4 +1,7 @@
 window.onload = () => {
+    // if(window.screen.lockOrientation("portrait")){
+    //     window.screen.lockOrientation("portrait")
+    // }
     const sectionHeight = document.getElementsByClassName('inner')[1].offsetTop
     let currentSection = 0
     let shouldScroll = true

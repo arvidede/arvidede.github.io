@@ -68,19 +68,24 @@ body {
 }
 
 .inner {
-    height: 90vh;
+    height: 93vh;
     width: 100%;
     display: flex;
     color: #fff;
     font-weight: 100 !important;
     font-size: 2rem;
     position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner > .inner-wrapper {
+    transition: ease 1.2s;
+    opacity: 0;
 }
 
 .inner:not(:first-of-type) > .inner-wrapper {
-    padding-top: 3rem;
-    transition: ease 1.2s;
-    opacity: 0;
+    /*padding-top: 3rem;*/
 }
 
 /* Lazy load effect */
@@ -93,6 +98,7 @@ body {
 }
 
 .inner.active > .inner-wrapper {
+    transition-delay: 0.15s;
     opacity: 1;
     /*transform: translateX(0);*/
 }
@@ -114,7 +120,7 @@ body {
 }
 
 .top-navigator {
-    left: -2rem;
+    transform: translateX(-100%);
     top: 65vh;
     position: absolute;
     transition: linear 200ms;
@@ -148,17 +154,22 @@ body {
 }
 
 .top-navigator.active {
-    left: 0;
+    transform: translateX(0);
     opacity: 1;
 }
 
-/* Top */
+
+
+
+
+
+/* -- Top -- */
 
 .first {
     background: #2982F8;
 }
 
-.down-arrow {
+.chevron {
     position: absolute;
     bottom: 1rem;
     width: 3rem;
@@ -166,11 +177,11 @@ body {
     animation: jump 2s infinite;
 }
 
-.down-arrow:hover {
+.chevron:hover {
     cursor: pointer;
 }
 
-.down-arrow img {
+.chevron img {
     width: 100%;
 }
 
@@ -180,12 +191,19 @@ body {
     100% {transform: translateY(0);}
 }
 
-/* About */
+
+
+
+
+
+/* -- About -- */
 
 .about {
-    background: #C1C1C1;
+    /*background: #c3c3c3;*/
+    background: #fff;
     display: flex;
     flex-direction: column;
+    color: #666;
 }
 
 .about-container {
@@ -209,7 +227,7 @@ body {
 
 .cv-btn {
     margin-top: 3rem;
-    color: #fff;
+    color: #666;
     display: flex;
     align-items: center;
     -webkit-text-decoration-line: none;
@@ -288,7 +306,11 @@ body {
     color: #666;
 }
 
-/* Contact Form */
+
+
+
+
+/* -- Contact Form -- */
 
 .contact {
     background: #6680A8;
@@ -397,7 +419,9 @@ body {
 
 .form-control ~ .focus-border {
     position: absolute;
-    left: 0; width: 0;
+    left: 0;
+    width: 0;
+    bottom: 0;
     height: 3px;
     background-color: #52A6CC;
     transition: 0.4s;
@@ -409,20 +433,32 @@ body {
 }
 
 
-/* Footer */
+
+
+
+/* -- Footer -- */
 
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: 7vh;
     text-align: center;
     color: #c1c1c1;
     position: absolute;
     bottom: 0;
     z-index: 1;
 }
+
+footer a {
+    color: #c1c1c1;
+    margin-right: 5px;
+    text-decoration-line: none;
+}
+
+
+
 
 
 /* Media queries */

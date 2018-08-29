@@ -1,13 +1,12 @@
 window.onload = () => {
     const sectionHeight = document.getElementsByClassName('inner')[1].offsetTop
-
     let currentSection = 0
     let shouldScroll = true
     let lastEvent;
     let lastScroll = 0;
     let swipeY = 0
     let isSwiping = false
-
+    document.getElementsByClassName('inner')[currentSection].classList.add('active')
     document.addEventListener('mousewheel', handleScroll)
     document.addEventListener("touchmove", phoneScroll, true);
     document.addEventListener("touchend", scrollEnd, false);
@@ -60,9 +59,8 @@ window.onload = () => {
 
     function doScroll(isDown) {
         shouldScroll = false
-        document.getElementsByClassName('inner')[currentSection].classList.remove('active')
         currentSection = (currentSection < 2 && isDown) ? (currentSection + 1) : ((currentSection > 0 && !isDown) ? currentSection - 1 : currentSection)
-        document.getElementsByClassName('inner')[currentSection].classList.toggle('active')
+        document.getElementsByClassName('inner')[currentSection].classList.add('active')
         document.getElementsByClassName('top-navigator')[0].className = currentSection > 0 ? 'top-navigator active' : 'top-navigator'
         document.getElementById('scroll-content').style.transform = `translateY(-${currentSection * sectionHeight}px)`
         setTimeout(handleHasScrolled, 800)
@@ -73,9 +71,7 @@ window.onload = () => {
     }
 
     scrollToTop = () => {
-        document.getElementsByClassName('inner')[currentSection].classList.remove('active')
         currentSection = 0
-        document.getElementsByClassName('inner')[currentSection].classList.toggle('active')
         document.getElementsByClassName('top-navigator')[0].className = 'top-navigator'
         document.getElementById('scroll-content').style.transform = `translateY(0)`
     }

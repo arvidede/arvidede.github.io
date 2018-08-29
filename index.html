@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Arvid Edenheim</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
     <script type="text/javascript" src="./assets/js/index.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <main>
         <div class="outer">
             <div id="scroll-content">
-                <div class="inner first active">
+                <div class="inner first">
                     <div class="inner-wrapper">
                         <p>Arvid Edenheim</p>
-                        <a onClick="navigateDown()" class="down-arrow">
+                        <a onClick="navigateDown()" class="chevron">
                             <img src='./assets/img/down-arrow-2.png'>
                         </a>
                     </div>
@@ -86,7 +95,11 @@
                 </div>
             </div>
             <button class='top-navigator' onClick='scrollToTop()'></button>
-            <footer>Registrerad för F-Skatt | 2018</footer>
+            <footer>
+                <p>
+                    <a href="mailto:arvid@edenheim.se">arvid@edenheim.se</a>| 073-5320103 | Registrerad för F-Skatt | 2018
+                </p>
+            </footer>
         </div>
     </main>
 </body>

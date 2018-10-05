@@ -65,7 +65,7 @@ window.onload = () => {
         currentSection = (currentSection < 2 && isDown) ? (currentSection + 1) : ((currentSection > 0 && !isDown) ? currentSection - 1 : currentSection)
         document.getElementsByClassName('inner')[currentSection].classList.add('active')
         document.getElementsByClassName('top-navigator')[0].className = currentSection > 0 ? 'top-navigator active' : 'top-navigator'
-        document.getElementById('scroll-content').style.transform = `translateY(-${currentSection * sectionHeight}px)`
+        document.getElementById('scroll-content').style.transform = `translateY(-${100 * currentSection}vh)`
         setTimeout(handleHasScrolled, 800)
     }
 

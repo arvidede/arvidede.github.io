@@ -187,7 +187,24 @@ body {
 /* -- Top -- */
 
 .first {
-    background: linear-gradient(225deg, #00537E, #3AA17E);
+    background: linear-gradient(225deg, rgba(0,83,126,0.8), rgba(58,161,126,0.8));
+    overflow: hidden;
+}
+
+.background-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.background-code video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
 
 .chevron {

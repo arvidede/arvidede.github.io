@@ -9,6 +9,7 @@ window.onload = () => {
     let lastScroll = 0;
     let swipeY = 0
     let isSwiping = false
+    let isPlaying = false
     document.getElementsByClassName('inner')[currentSection].classList.add('active')
     document.addEventListener('mousewheel', handleScroll)
     document.addEventListener("touchmove", phoneScroll, true);
@@ -81,6 +82,23 @@ window.onload = () => {
 
     navigateDown = () => {
         doScroll(true)
+    }
+
+    toggleAudio = () => {
+        const player = document.getElementById('yt-player')
+        let src = player.src
+        src = src.substring(0, src.length - 1)
+        src += isPlaying ? "0" : "1"
+        player.src = src
+        const toggle = document.getElementById('toggle')
+        if(isPlaying) {
+            toggle.classList.remove('fa-volume-up')
+            toggle.classList.add('fa-volume-off')
+        } else {
+            toggle.classList.remove('fa-volume-off')
+            toggle.classList.add('fa-volume-up')
+        }
+        isPlaying = !isPlaying
     }
 }
 

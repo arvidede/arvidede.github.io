@@ -72,6 +72,7 @@ body {
 
 * {
     font-family: sans-serif, "Montserrat", "Roboto";
+    outline: none;
 }
 
 .outer {
@@ -205,6 +206,26 @@ body {
     width: 100%;
     object-fit: cover;
     background-repeat: no-repeat;
+}
+
+#yt-player {
+    display: none;
+}
+
+.toggle-audio {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 2rem;
+    display: flex;
+    width: 2rem;
+}
+
+.toggle-audio:hover {
+    cursor: pointer;
 }
 
 .chevron {

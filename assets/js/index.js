@@ -15,6 +15,10 @@ window.onload = () => {
     document.addEventListener("touchmove", phoneScroll, true);
     document.addEventListener("touchend", scrollEnd, false);
 
+    const footer = document.getElementById("footer")
+    const year = new Date().getFullYear()
+    footer.innerHTML = `<a href="mailto:arvid@edenheim.se">arvid@edenheim.se</a>| 073-5320103 | Registrerad för F-Skatt | ${year}`
+
     window.onkeydown = function(event) {
         if (lastEvent && lastEvent.key === event.key) {
             return;
@@ -66,7 +70,7 @@ window.onload = () => {
         currentSection = (currentSection < 2 && isDown) ? (currentSection + 1) : ((currentSection > 0 && !isDown) ? currentSection - 1 : currentSection)
         document.getElementsByClassName('inner')[currentSection].classList.add('active')
         document.getElementsByClassName('top-navigator')[0].className = currentSection > 0 ? 'top-navigator active' : 'top-navigator'
-        document.getElementById('scroll-content').style.transform = `translateY(-${100 * currentSection}vh)`
+        document.getElementById('scroll-content').style.transform = `translateY(-${101 * currentSection}vh)`
         setTimeout(handleHasScrolled, 800)
     }
 

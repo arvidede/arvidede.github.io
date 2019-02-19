@@ -51,8 +51,8 @@ input[type="text"],
 input[type="button"],
 input[type="submit"],
 .input-checkbox {
--webkit-appearance: none;
-border-radius: 0;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 
@@ -83,8 +83,8 @@ body {
 }
 
 .inner {
-    height: 92vh;
-    margin-bottom: 8vh;
+    height: 100vh;
+    margin-bottom: 1vh;
     width: 100%;
     display: flex;
     color: #fff;
@@ -170,7 +170,7 @@ body {
     display: inline-block;
     padding: 4px;
     -webkit-transform: rotate(225deg);
-            transform: rotate(225deg);
+    transform: rotate(225deg);
     transition: linear 300ms;
     box-sizing: border-box;
 }
@@ -187,7 +187,7 @@ body {
 
 /* -- Top -- */
 
-.first {
+.top {
     background: linear-gradient(225deg, rgba(0,83,126,0.8), rgba(58,161,126,0.8));
     overflow: hidden;
 }
@@ -313,56 +313,56 @@ body {
     -webkit-text-decoration-line: none;
             text-decoration-line: none;
     margin-left: 10px;
-}*/
+    }*/
 
 /*.cv-btn h3 {
     position: absolute;
     right: -3.2rem;
-}*/
+    }*/
 
-.portfolio-outer,
-.portfolio-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .portfolio-outer,
+    .portfolio-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-}
+    }
 
-.portfolio-outer h5 {
-    position: relative;
-}
+    .portfolio-outer h5 {
+        position: relative;
+    }
 
-.portfolio-outer h5:after {
-    height: 1px;
-    width: 100px;
-    position: absolute;
-    background: #fff;
-    color: #fff;
-    bottom: 0;
-}
+    .portfolio-outer h5:after {
+        height: 1px;
+        width: 100px;
+        position: absolute;
+        background: #fff;
+        color: #fff;
+        bottom: 0;
+    }
 
-.portfolio-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-}
+    .portfolio-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
 
-.portfolio-wrap button {
-    border: none;
-    color: #fff;
-    background: rgba(0,0,0,0.2);
-    border-radius: 50%;
-    margin: 0 2rem;
-    height: 3rem;
-    width: 3rem;
-    line-height: 100%;
-}
+    .portfolio-wrap button {
+        border: none;
+        color: #fff;
+        background: rgba(0,0,0,0.2);
+        border-radius: 50%;
+        margin: 0 2rem;
+        height: 3rem;
+        width: 3rem;
+        line-height: 100%;
+    }
 
-.portfolio-wrap button:focus {
-    outline: none;
-}
+    .portfolio-wrap button:focus {
+        outline: none;
+    }
 
 /*.portfolio-img {
     position: relative;
@@ -430,6 +430,8 @@ body {
 /* -- Contact Form -- */
 
 .contact {
+    height: 92vh;
+    margin-bottom: 8vh;
     background: #6680A8;
     background: #00537E;
     /*background: linear-gradient(225deg, #00537E, #8E78FF);*/
@@ -530,7 +532,7 @@ body {
 
 .form-row:nth-of-type(3) input[type="submit"]:active {
     -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .form-row:nth-of-type(3) input[type="submit"]:hover {
@@ -585,45 +587,45 @@ footer a {
 /**
  * iPad with portrait orientation.
  */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
-  .outer {
-    height: 1024px;
-  }
+ @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    .outer {
+        height: 1024px;
+    }
 
-  .inner {
-    height: calc(1024px * 0.8);
-  }
+    .inner {
+        height: calc(1024px * 0.8);
+    }
 }
 
 /**
  * iPad with landscape orientation.
  */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-  .outer {
-    height: 768px;
-  }
+ @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    .outer {
+        height: 768px;
+    }
 
-  .inner {
-    height: calc(768px * 0.8);
-  }
+    .inner {
+        height: calc(768px * 0.8);
+    }
 }
 
 /**
  * iPhone with portrait orientation.
  */
-@media all and (max-width: 500px) and (max-height: 850px) and (orientation:portrait){
-  .inner.contact {
-    height: calc(90vh - 44px);
-  }
+ @media all and (max-width: 500px) and (max-height: 850px) and (orientation:portrait){
+    .inner.contact {
+        height: calc(90vh - 44px);
+    }
 }
 
 /**
  * iPhone with landscape orientation.
  */
-@media all and (max-width: 500px) and (max-height: 850px) and (orientation:landscape){
-  .inner.contact {
-    height: calc(90vh - 44px);
-  }
+ @media all and (max-width: 500px) and (max-height: 850px) and (orientation:landscape){
+    .inner.contact {
+        height: calc(90vh - 44px);
+    }
 }
 
 

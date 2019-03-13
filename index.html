@@ -20,12 +20,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400|Roboto:100,400" rel="stylesheet">
     <style>
-        .inner {
-            color: #fff;
-            font-weight: 100 !important;
-            font-size: 2rem;
-        }
-    </style>
+    .inner {
+        color: #fff;
+        font-weight: 100 !important;
+        font-size: 2rem;
+    }
+</style>
 </head>
 <body>
     <main>
@@ -35,30 +35,32 @@
                     <div class="background-code">
                         <video autoplay="autoplay" muted loop playsinline>
                             <source src="assets/img/Source Code - 4733.mp4" type="video/mp4">
-                        </video>
-                        <iframe id="yt-player" title="title" src="https://www.youtube.com/embed/sQ9NOV3KNpY?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            </video>
+                            <iframe id="yt-player" title="title" src="https://www.youtube.com/embed/sQ9NOV3KNpY?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        </div>
+                        <div class="inner-wrapper">
+                            <button class="toggle-audio" onclick="toggleAudio()"><i id="toggle" class="fas fa-volume-off"></i></button>
+                            <p style="color: #fff;
+                            font-weight: 100 !important;
+                            font-size: 2rem;">Arvid Edenheim</p>
+                            <a onClick="navigateDown()" class="chevron">
+                                <img src='./assets/img/down-arrow-2.png'>
+                            </a>
+                        </div>
                     </div>
-                    <div class="inner-wrapper">
-                        <button class="toggle-audio" onclick="toggleAudio()"><i id="toggle" class="fas fa-volume-off"></i></button>
-                        <p>Arvid Edenheim</p>
-                        <a onClick="navigateDown()" class="chevron">
-                            <img src='./assets/img/down-arrow-2.png'>
-                        </a>
-                    </div>
-                </div>
-                <div class="inner about">
-                    <div class="inner-wrapper">
-                        <h2>Om Mig</h2>
-                        <div class="about-container">
-                            <div class="about-inner left">
-                                <p>
-                                    Mitt namn är Arvid Edenheim. För tillfället studerar jag Industriell Ekonomi vid Linköpings universitet, med inriktning datateknik och master inom artificiell intelligens och maskininlärning samt logistik. Genom min utbildning och ett gediget intresse för webbutveckling har jag byggt en bred teknisk grund som låter mig tillämpa de senaste teknikerna inom såväl frontend som backend. Denna helhetsbild gör att jag kan tillhandahålla kompletta lösningar, från databas till design.
-                                </p>
-                                <p>
-                                    Om ni har några frågor, vill veta mer om mig, eller söker en kostnadsfri offert för er idé - <a onClick="navigateDown()">hör gärna av er</a> så återkommer jag inom kort.
-                                </p>
-                            </div>
-                            <div class="about-inner right">
+                    <div class="inner about">
+                        <div class="inner-wrapper">
+                            <h2>Om Mig</h2>
+                            <div class="about-container">
+                                <div class="about-inner left">
+                                    <p>
+                                        Mitt namn är Arvid Edenheim. För tillfället studerar jag Industriell Ekonomi vid Linköpings universitet, med inriktning datateknik och master inom artificiell intelligens och maskininlärning samt logistik. Genom min utbildning och ett gediget intresse för webbutveckling har jag byggt en bred teknisk grund som låter mig tillämpa de senaste teknikerna inom såväl frontend som backend. Denna helhetsbild gör att jag kan tillhandahålla kompletta lösningar, från databas till design.
+                                    </p>
+                                    <p>
+                                        Om ni har några frågor, vill veta mer om mig, eller söker en kostnadsfri offert för er idé - <a onClick="navigateDown()">hör gärna av er</a> så återkommer jag inom kort.
+                                    </p>
+                                </div>
+                                <div class="about-inner right">
                                 <!-- <div class="portfolio-outer">
                                     <h5>Portfolio</h5>
                                     <div class="portfolio-wrap">

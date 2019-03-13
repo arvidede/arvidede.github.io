@@ -215,13 +215,13 @@ body {
 .toggle-audio {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 0.5rem;
     background: none;
     border: none;
     color: #ccc;
     font-size: 2rem;
     display: flex;
-    width: 3rem;
+    width: 3.5rem;
 }
 
 .toggle-audio:hover {

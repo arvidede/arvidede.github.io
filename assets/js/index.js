@@ -1,7 +1,18 @@
 window.onload = () => {
-    // if(window.screen.lockOrientation("portrait")){
-    //     window.screen.lockOrientation("portrait")
-    // }
+
+    /* Footer with current year */
+    const footer = document.getElementById("footer")
+    const year = new Date().getFullYear()
+    footer.innerHTML = `<a href="mailto:arvid@edenheim.se">arvid@edenheim.se</a>| 073-5320103 | Registrerad för F-Skatt | ${year}`
+
+
+
+
+
+
+
+
+    /* Section scrolling  */
     const sectionHeight = document.getElementsByClassName('inner')[1].offsetTop
     let currentSection = 0
     let shouldScroll = true
@@ -14,10 +25,6 @@ window.onload = () => {
     document.addEventListener('mousewheel', handleScroll)
     document.addEventListener("touchmove", phoneScroll, true);
     document.addEventListener("touchend", scrollEnd, false);
-
-    const footer = document.getElementById("footer")
-    const year = new Date().getFullYear()
-    footer.innerHTML = `<a href="mailto:arvid@edenheim.se">arvid@edenheim.se</a>| 073-5320103 | Registrerad för F-Skatt | ${year}`
 
     window.onkeydown = function(event) {
         if (lastEvent && lastEvent.key === event.key) {
@@ -88,6 +95,14 @@ window.onload = () => {
         doScroll(true)
     }
 
+
+
+
+
+
+
+
+    /* Background sound */
     toggleAudio = () => {
         const player = document.getElementById('yt-player')
         let src = player.src

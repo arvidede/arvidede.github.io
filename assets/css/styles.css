@@ -630,6 +630,11 @@ footer a {
 
 
 @media screen and (max-width: 860px) {
+    .toggle-audio {
+        width: 4rem;
+        right: 1rem;
+    }
+
     .about-inner.left p {
         font-size: 0.9rem;
         line-height: 1rem;

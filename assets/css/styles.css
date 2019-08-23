@@ -45,6 +45,7 @@ table {
     border-spacing: 0;
 }
 
+
 textarea,
 input.text,
 input[type="text"],
@@ -53,6 +54,16 @@ input[type="submit"],
 .input-checkbox {
     -webkit-appearance: none;
     border-radius: 0;
+}
+
+button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -84,7 +95,7 @@ body {
 
 .inner {
     height: 100vh;
-    margin-bottom: 1vh;
+    margin-bottom: 10px;
     width: 100%;
     display: flex;
     color: #fff;
@@ -93,6 +104,7 @@ body {
     position: relative;
     justify-content: center;
     align-items: center;
+    transition: ease 0.3s;
 }
 
 .inner > .inner-wrapper {
@@ -221,11 +233,21 @@ body {
     color: #ccc;
     font-size: 2rem;
     display: flex;
+    justify-content: flex-start;
     width: 3.5rem;
 }
 
 .toggle-audio:hover {
     cursor: pointer;
+}
+
+#hero-topics {
+    opacity: 0;
+    transition: ease 0.5s;
+}
+
+#hero-topics.visible {
+    opacity: 1;
 }
 
 .chevron {
@@ -284,7 +306,7 @@ body {
 
 .about-inner.left p {
     padding: 0 0 0 5rem;
-    line-height: 1.4rem;
+    line-height: 1.8rem;
     font-size: 1.2rem;
     text-align: justify;
 }
@@ -413,13 +435,13 @@ body {
     display: flex;
     color: #fff;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-align: left;
     height: 100%;
 }
 
 .logo svg {
-    width: 1.2rem !important;
+    width: 1.6rem !important;
     margin-right: 1rem;
 }
 
@@ -565,7 +587,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 8vh;
+    height: 60px;
     text-align: center;
     color: #c1c1c1;
     bottom: 0;
@@ -631,13 +653,17 @@ footer a {
 
 @media screen and (max-width: 860px) {
     .toggle-audio {
-        width: 4rem;
         right: 1rem;
+        width: 5rem;
+    }
+
+    #hero-topics {
+        transform: translateY(-2rem);
     }
 
     .about-inner.left p {
-        font-size: 0.9rem;
-        line-height: 1rem;
+        font-size: 1rem;
+        line-height: 1.4rem;
         padding: 0 2rem;
     }
 
@@ -663,15 +689,16 @@ footer a {
     }
 
     .chevron {
-        bottom: 3rem;
+        bottom: 1rem;
     }
 
     .social {
-        margin-top: 2rem;
+        margin-top: 1rem;
         display: flex;
     }
 
-    .logo a {
+    .logo:last-of-type svg {
+        margin-right: 0;
         /*font-size: 15rem !important;*/
     }
 

@@ -129,7 +129,7 @@ window.onload = () => {
 
     /* Topics */
     let topic = 0
-    const topics = ['Data Science', 'Web Development', 'Programming', 'Economics', 'Technology']
+    const topics = ['Data Science', 'Web Development', 'Tinkering', 'Problem Solving']
     const topicElement = document.getElementById('hero-topics')
     const transitionTime = 500
     const timeout = 4000

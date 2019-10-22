@@ -27,9 +27,9 @@ window.onload = () => {
     let isSwiping = false
     let isPlaying = false
     document.getElementsByClassName('inner')[currentSection].classList.add('active')
-    document.addEventListener('mousewheel', handleScroll)
-    document.addEventListener("touchmove", phoneScroll, true);
-    document.addEventListener("touchend", scrollEnd, false);
+    document.addEventListener('mousewheel', handleScroll, { passive: true })
+    document.addEventListener("touchmove", phoneScroll, { passive: true })
+    document.addEventListener("touchend", scrollEnd, { passive: true });
 
     window.onkeydown = function(event) {
         if (lastEvent && lastEvent.key === event.key) {
@@ -109,11 +109,12 @@ window.onload = () => {
 
     /* Background sound */
     toggleAudio = () => {
-        const player = document.getElementById('yt-player')
-        let src = player.src
-        src = src.substring(0, src.length - 1)
-        src += isPlaying ? "0" : "1"
-        player.src = src
+        const player = document.getElementById('audio')
+        isPlaying ? player.pause() : player.play()
+        // let src = player.src
+        // src = src.substring(0, src.length - 1)
+        // src += isPlaying ? "0" : "1"
+        // player.src = src
         const toggle = document.getElementById('toggle')
         if(isPlaying) {
             toggle.classList.remove('fa-volume-up')

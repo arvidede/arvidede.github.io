@@ -158,7 +158,6 @@ section:first-of-type article {
         min-height: 85vh;
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 2rem;
     }
 
     section img {
@@ -179,5 +178,12 @@ section:first-of-type article {
 
     section:first-of-type article {
         margin-top: 2rem;
+    }
+
+    .toggle-audio {
+        font-size: 1.5rem;
+        top: 0.5rem;
+        left: -1rem;
+        width: 4.5rem;
     }
 }

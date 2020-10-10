@@ -209,7 +209,7 @@ section:first-of-type article {
 }
 
 .logo svg {
-    width: 6rem !important;
+    /*width: 6rem !important;*/
     height: 3rem;
 }
 

@@ -1,56 +1,188 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-    <meta name="description" content="Arvid Edenheim, Software Developer and Data Scientist">
-    <title>Arvid Edenheim</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
-    <script async type="text/javascript" src="./assets/js/index.js"></script>
-    <script defer async src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+        <meta
+            name="description"
+            content="Arvid Edenheim, Software Developer and Data Scientist"
+        />
+        <title>Arvid Edenheim</title>
+        <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+        <script
+            async
+            type="text/javascript"
+            src="./assets/js/index.js"
+        ></script>
+        <script
+            defer
+            async
+            src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+        ></script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/site.webmanifest">
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./favicon/site.webmanifest" />
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-</head>
-<body>
-    <main>
-        <audio id="audio" preload="none">
-            <source src="./assets/fellowship.mp3" type="audio/mpeg" />
-        </audio>
-        <button class="toggle-audio" onclick="toggleAudio()"><i id="toggle" class="fas fa-volume-off"></i></button>
-        <section>
-            <h1>Arvid <br/>Edenheim</h1>
-            <article>
-                <div class="logo" title="GitHub">
-                    <a href="https://github.com/arvidede">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                <div class="logo" title="LinkedIn">
-                    <a href="https://www.linkedin.com/in/arvid-edenheim-8b088b171/">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-                <div class="logo" title="Instagram">
-                    <a href="https://www.instagram.com/arvidede/">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-                <div class="logo">
-                    <a href="./assets/CV.pdf" target="_blank">
-                        <i id="cv" class="far fa-file"></i>
-                    </a>
-                </div>
-            </article>
-        </section>
-        <section>
-            <img src="assets/img/arvid.jpg" alt="">
-        </section>
-    </main>
-</body>
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <main>
+            <audio id="audio" preload="none">
+                <source src="./assets/fellowship.mp3" type="audio/mpeg" />
+            </audio>
+            <button class="toggle-audio" onclick="toggleAudio()">
+                <i id="toggle" class="fas fa-volume-off"></i>
+            </button>
+            <section>
+                <h1>Arvid <br />Edenheim</h1>
+                <article>
+                    <div class="logo" title="GitHub">
+                        <a href="https://github.com/arvidede">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="logo" title="LinkedIn">
+                        <a
+                            href="https://www.linkedin.com/in/arvid-edenheim-8b088b171/"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href="./assets/CV.pdf" target="_blank">
+                            <i id="cv" class="far fa-file"></i>
+                        </a>
+                    </div>
+                    <div class="logo" title="Ramen">
+                        <a href="/ramen">
+                            <svg viewBox="0 0 209 209" fill="none">
+                                <g id="ramen icon">
+                                    <g id="chopsticks">
+                                        <rect
+                                            id="Rectangle 23"
+                                            x="149.952"
+                                            y="80"
+                                            width="2"
+                                            height="43"
+                                            rx="1"
+                                            transform="rotate(50.2669 149.952 80)"
+                                            fill="#6D5A5A"
+                                        />
+                                        <rect
+                                            id="Rectangle 24"
+                                            x="142.802"
+                                            y="73"
+                                            width="2"
+                                            height="43"
+                                            rx="1"
+                                            transform="rotate(20.2997 142.802 73)"
+                                            fill="#6D5A5A"
+                                        />
+                                    </g>
+                                    <g id="bowl">
+                                        <path
+                                            d="M147.696 111.909C147.939 109.193 145.676 107 142.949 107H61.7966C59.166 107 56.9475 109.047 57.0146 111.676C57.4129 127.291 65.9383 134.081 78.8839 141C97.4326 143.418 107.835 143.352 126.384 141C136.905 133.986 146.318 127.287 147.696 111.909Z"
+                                            fill="#FC7981"
+                                        />
+                                        <path
+                                            d="M126.384 141C107.835 143.352 97.4326 143.418 78.8839 141C78.2399 142.816 78.0173 144.08 78.1372 145.296C78.3088 147.035 79.9419 148.177 81.6696 148.44C97.7128 150.888 107.784 150.808 123.903 148.384C125.462 148.149 126.984 147.208 127.209 145.648C127.401 144.311 127.09 142.96 126.384 141Z"
+                                            fill="#FC7981"
+                                        />
+                                        <path
+                                            d="M126.384 141C136.905 133.986 146.318 127.287 147.696 111.909C147.939 109.193 145.676 107 142.949 107H61.7966C59.166 107 56.9475 109.047 57.0146 111.676C57.4129 127.291 65.9383 134.081 78.8839 141M126.384 141C107.835 143.352 97.4326 143.418 78.8839 141M126.384 141C127.09 142.96 127.401 144.311 127.209 145.648C126.984 147.208 125.462 148.149 123.903 148.384C107.784 150.808 97.7128 150.888 81.6696 148.44C79.9419 148.177 78.3088 147.035 78.1372 145.296C78.0173 144.08 78.2399 142.816 78.8839 141"
+                                            stroke="#FC7981"
+                                        />
+                                    </g>
+                                    <g id="shadow">
+                                        <path
+                                            id="Rectangle 17"
+                                            d="M61.4672 116.864C61.4175 116.65 61.5152 116.426 61.7071 116.318C61.987 116.16 62.3409 116.304 62.4333 116.612C64.2238 122.574 65.9654 125.516 69.673 129.48C69.8948 129.717 69.8385 130.101 69.5556 130.261C69.3685 130.366 69.1335 130.339 68.9755 130.193C64.7755 126.327 62.9798 123.388 61.4672 116.864Z"
+                                            fill="#FFC0C4"
+                                        />
+                                        <path
+                                            id="Rectangle 18"
+                                            d="M70.3748 131.117C70.242 130.963 70.2256 130.741 70.3301 130.567C70.4977 130.287 70.8893 130.254 71.116 130.488C72.0868 131.491 72.9472 131.965 74.3288 132.39C74.6429 132.486 74.7908 132.85 74.6219 133.132C74.5152 133.31 74.3083 133.404 74.1054 133.36C72.4346 133.003 71.5333 132.46 70.3748 131.117Z"
+                                            fill="#FFC0C4"
+                                        />
+                                        <rect
+                                            id="Rectangle 19"
+                                            x="75.9938"
+                                            y="133"
+                                            width="2"
+                                            height="1"
+                                            rx="0.5"
+                                            transform="rotate(6.30986 75.9938 133)"
+                                            fill="#FFC0C4"
+                                        />
+                                    </g>
+                                    <g id="smoke">
+                                        <path
+                                            id="Rectangle 20"
+                                            d="M91.2271 65.2236C91.0421 64.6203 91.487 64 92.118 64C92.5407 64 92.9101 64.2866 93.0132 64.6966C94.726 71.5085 95.2549 75.7767 92.8363 84C90.4742 92.0314 89.6769 95.8169 92.3353 102.752C92.5636 103.348 92.1322 104 91.4943 104C91.103 104 90.7566 103.744 90.643 103.37C88.4466 96.1271 88.0853 91.8049 90.8363 84C93.0214 76.8522 93.4857 72.5865 91.2271 65.2236Z"
+                                            fill="#D0C9CA"
+                                        />
+                                        <path
+                                            id="Rectangle 22"
+                                            d="M113.227 65.2236C113.042 64.6203 113.487 64 114.118 64C114.541 64 114.91 64.2866 115.013 64.6966C116.726 71.5085 117.255 75.7767 114.836 84C112.474 92.0314 111.677 95.8169 114.335 102.752C114.564 103.348 114.132 104 113.494 104C113.103 104 112.757 103.744 112.643 103.37C110.447 96.1271 110.085 91.8049 112.836 84C115.021 76.8522 115.486 72.5865 113.227 65.2236Z"
+                                            fill="#D0C9CA"
+                                        />
+                                        <path
+                                            id="Rectangle 21"
+                                            d="M102.368 58.3026C102.181 57.6554 102.661 57 103.335 57C103.797 57 104.2 57.3175 104.306 57.7682C106.15 65.6211 106.722 70.53 104.124 80C101.579 89.2763 100.727 93.6272 103.624 101.67C103.855 102.311 103.388 103 102.706 103C102.275 103 101.895 102.714 101.778 102.299C99.4155 93.9554 99.0244 88.9841 101.978 80C104.332 71.7463 104.825 66.8342 102.368 58.3026Z"
+                                            fill="#D0C9CA"
+                                        />
+                                    </g>
+                                    <g id="shadow_2">
+                                        <path
+                                            id="Rectangle 25"
+                                            d="M81.0138 145.569C81.0475 145.269 81.3405 145.07 81.6321 145.146C87.9796 146.803 91.8433 147.183 98.3955 147.027C98.6957 147.02 98.9349 147.279 98.9013 147.578C98.8737 147.823 98.6668 148.011 98.4196 148.016C91.7402 148.151 87.8613 147.756 81.3822 146.101C81.1444 146.04 80.9863 145.813 81.0138 145.569Z"
+                                            fill="#FFC0C4"
+                                        />
+                                        <path
+                                            id="Rectangle 26"
+                                            d="M99.8839 147.537C99.8839 147.246 100.129 147.015 100.42 147.03C101.881 147.106 102.887 147.107 104.349 147.03C104.639 147.015 104.884 147.245 104.884 147.536C104.884 147.798 104.682 148.017 104.421 148.037C102.895 148.154 101.872 148.161 100.346 148.039C100.084 148.018 99.8839 147.799 99.8839 147.537Z"
+                                            fill="#FFC0C4"
+                                        />
+                                        <rect
+                                            id="Rectangle 27"
+                                            x="105.884"
+                                            y="147.098"
+                                            width="2"
+                                            height="1"
+                                            rx="0.5"
+                                            transform="rotate(-2.80718 105.884 147.098)"
+                                            fill="#FFC0C4"
+                                        />
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <img src="assets/img/arvid.jpg" alt="" />
+            </section>
+        </main>
+    </body>
 </html>

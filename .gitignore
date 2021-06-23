@@ -3,3 +3,4 @@ package-lock.json
 /.cache
 /dist
 index_.html
+*.DS_Store

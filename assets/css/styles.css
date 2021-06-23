@@ -331,7 +331,7 @@ section article:nth-of-type(2) .logo:last-of-type {
     .toggle-audio {
         font-size: 2rem;
         top: 0.5rem;
-        left: 0.5rem;
+        left: -1rem;
         width: 4.5rem;
     }
 }

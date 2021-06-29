@@ -199,8 +199,6 @@ section img {
 }
 
 @keyframes translateLeft {
-    img {
-    }
     from {
         transform: translateX(20vw);
     }

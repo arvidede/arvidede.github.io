@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/arvidede/arvidede.github.io#readme",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.0.0-beta.2",
+    "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
     "cssnano": "^4.1.0"
   }
 }

@@ -1,6 +1,5 @@
 package-lock.json
 /node_modules
-/.cache
+/.parcel-cache
 /dist
-index_.html
 *.DS_Store

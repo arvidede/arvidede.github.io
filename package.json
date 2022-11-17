@@ -2,10 +2,11 @@
   "name": "edenheim",
   "version": "1.0.0",
   "description": "Personal webpage",
-  "main": "./assets/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html && cp CNAME /dist",
+    "publish": "git subtree push --prefix=dist origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.0.0-beta.2",
     "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
-    "cssnano": "^4.1.0"
+    "cssnano": "^4.1.0",
+    "parcel": "^2.8.0"
   }
 }

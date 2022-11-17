@@ -5,8 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
-    "build": "parcel build index.html && cp CNAME /dist",
-    "publish": "git subtree push --prefix=dist origin gh-pages"
+    "build": "parcel build index.html && cp CNAME ./dist",
+    "publish": "gh-pages -d dist",
+    "release": "npm run build && npm run publish"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "@parcel/packager-raw-url": "^2.0.0-beta.2",
     "@parcel/transformer-webmanifest": "^2.0.0-beta.2",
     "cssnano": "^4.1.0",
+    "gh-pages": "^4.0.0",
     "parcel": "^2.8.0"
   }
 }

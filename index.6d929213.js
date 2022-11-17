@@ -1,0 +1,2 @@
+window.onload=()=>{document.getElementById("footer"),(new Date).getFullYear();let e=!1;toggleAudio=()=>{const o=document.getElementById("audio");e?o.pause():o.play();const t=document.getElementById("toggle");e?(t.classList.remove("fa-volume-up"),t.classList.add("fa-volume-off")):(t.classList.remove("fa-volume-off"),t.classList.add("fa-volume-up")),e=!e}};
+//# sourceMappingURL=index.6d929213.js.map
